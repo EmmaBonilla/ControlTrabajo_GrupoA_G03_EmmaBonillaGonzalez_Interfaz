@@ -44,7 +44,13 @@ public class PanelVisual extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==apilarContenedorButton) {
-            Contenedores Cont = new Contenedores(Integer.parseInt(textField_Id.getText()), Integer.parseInt(textField_Peso.getText()), textField_Pais.getText(), Boolean.parseBoolean(comboBoxAduana.getModel().getSelectedItem().toString()), Integer.parseInt(comboBoxPrioridad.getModel().getSelectedItem().toString()), textFile_Descripcion.getText().toCharArray(), textField_EmpresaEmisora.getText().toCharArray(), textField_EmpresaReceptora.getText().toCharArray());
+            Contenedores Cont = new Contenedores(Integer.parseInt(textField_Id.getText()),
+                    Integer.parseInt(textField_Peso.getText()), textField_Pais.getText(),
+                    Boolean.parseBoolean(comboBoxAduana.getModel().getSelectedItem().toString()),
+                    Integer.parseInt(comboBoxPrioridad.getModel().getSelectedItem().toString()),
+                    textFile_Descripcion.getText().toCharArray(),
+                    textField_EmpresaEmisora.getText().toCharArray(),
+                    textField_EmpresaReceptora.getText().toCharArray());
             HC.Apilar(Cont);
             textField_Texto.setText("Se ha apilado el contenedor correctamente");
         }
