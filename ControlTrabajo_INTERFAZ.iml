@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../ControlTrabajo_CLASES/TrabajoGrupoG03-master/out/artifacts/TrabajoGrupoG03_jar/TrabajoGrupoG03.jar!/" />
+          <root url="jar://$MODULE_DIR$/../ControlTrabajo_CLASES/out/artifacts/ControlTrabajo_jar3/ControlTrabajo.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

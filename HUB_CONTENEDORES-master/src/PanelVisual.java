@@ -25,6 +25,7 @@ public class PanelVisual extends JFrame implements ActionListener {
     private JTextArea textAreaDatos;
     private JComboBox comboBoxPrioridad;
     private JComboBox comboBoxAduana;
+    private JButton BusquedaContenedoresenhub;
 
     public PanelVisual() {
         setContentPane(PanelMain);
@@ -38,6 +39,8 @@ public class PanelVisual extends JFrame implements ActionListener {
         mostrarNúmeroDeContenedoresButton.addActionListener(this);
         apilarContenedorButton.addActionListener(this);
         desapilarContenedorButton.addActionListener(this);
+        /*EXAMEN:*/
+        BusquedaContenedoresenhub.addActionListener(this);
     }
 
     Puerto HC=new Puerto();
@@ -66,6 +69,9 @@ public class PanelVisual extends JFrame implements ActionListener {
         }
         if (e.getSource()==mostrarNúmeroDeContenedoresButton){
             textField_NumPais.setText(HC.Pais(textField_NumPais.getText()));
+        }
+        if(e.getSource()==BusquedaContenedoresenhub){
+            textAreaPlano.setText(HC.BuscaPorPrioridad(Integer.parseInt(comboBoxPrioridad.getModel().getSelectedItem().toString())));
         }
     }
 }
